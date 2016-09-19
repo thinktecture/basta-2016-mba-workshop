@@ -1,4 +1,6 @@
 .idea
 .DS_Store
-src/node_modules
-mbaApp/platforms
+src/node_modules/
+dist
+src/cordova/platforms/**/*
+src/cordova/plugins/**/*
