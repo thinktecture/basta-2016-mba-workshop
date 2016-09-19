@@ -12,23 +12,25 @@ module.exports = {
         './node_modules/zone.js/dist/zone.js',
         './node_modules/reflect-metadata/Reflect.js',
         './node_modules/systemjs/dist/system.src.js',
-        './node_modules/bootstrap/dist/js/bootstrap.min.js',
-        './system.config.js'
+        
+        './system.config.js',
+        './node_modules/bootstrap/dist/js/bootstrap.min.js'
         ],
         tsProject: './tsconfig.json',
         injectables: [
-         '../dist/styles/app.css',
-         '../dist/scripts/app.js'],
+         '../dist/web/styles/app.css',
+         '../dist/web/scripts/app.js'],
         indexHtml:'./index.html',
-        electronSources: '../electron/**/*'
+        electronSources: './electron/**/*'
     },
     targets: {
         
         root: '../dist',
+        webRoot: '../dist/web',
         desktopOsx: '../dist/desktop/osx',
         desktopWin: '../dist/desktop/win',
         desktopLinux: '../dist/desktop/linux',
-        electron: '../dist/.tmp/electron',
+        electron: '../dist/tmp/electron',
         styles: '../dist/web/styles',
         scripts: '../dist/web/scripts',
         app: '../dist/web/app',

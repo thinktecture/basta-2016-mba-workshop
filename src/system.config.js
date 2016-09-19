@@ -22,7 +22,7 @@
             '@angular/router': '@angular/router/bundles/router.umd.js',
             '@angular/forms': '@angular/forms/bundles/forms.umd.js',
             // other libraries
-            'rxjs':                       'rxjs',
+            'rxjs': 'rxjs',
             
         },
         // packages tells the System loader how to load when no filename and/or no extension

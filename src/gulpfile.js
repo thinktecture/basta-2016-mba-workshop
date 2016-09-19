@@ -40,8 +40,6 @@ gulp.task('build-app-scripts', function(){
     gulp.src(c.sources.appTs)
                 .pipe(ts(tsConfig))
                 .pipe(gulp.dest(c.targets.app));
-        
-
 });
 
 gulp.task('copy-ng2-stuff', ()=>{
@@ -57,7 +55,7 @@ gulp.task('default', function(done){
         ['build-app-scripts','copy-ng2-stuff', 'copy-rx-stuff' , 'build-vendor-css', 'build-vendor-js','copy-html'],
         'build-index',
         'prepare-electron',
-        ['electron-osx', 'electron-win','electron-linux'],
+        ['electron-osx', 'electron-linux', 'electron-win'],
         'delete-tmp',done);
 });
 gulp.task('prepare-electron', () => {
@@ -103,8 +101,8 @@ gulp.task('build-index', function(){
     return gulp.src(c.sources.indexHtml)
         .pipe(fl())
         .pipe(inject(injectables, {
-            ignorePath: c.targets.root,
+            ignorePath: c.targets.webRoot,
             addRootSlash: false
         }))
-        .pipe(gulp.dest(c.targets.root));
+        .pipe(gulp.dest(c.targets.webRoot));
 });
