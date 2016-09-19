@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && npm run lite",
+    "start": "npm run build",
     "lite": "lite-server",
     "postinstall": "typings install",
     "build": "gulp",
@@ -38,14 +38,11 @@
     "zone.js": "^0.6.23"
   },
   "devDependencies": {
-    "concurrently": "^2.2.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-awesome-electron": "^1.2.0",
     "gulp-concat": "^2.6.0",
-    "gulp-filelog": "^0.4.1",
     "gulp-inject": "^4.1.0",
-    "gulp-rename": "^1.2.2",
     "gulp-symdest": "^1.1.0",
     "gulp-typescript": "^2.13.6",
     "lite-server": "^2.2.2",

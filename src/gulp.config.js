@@ -21,10 +21,12 @@ module.exports = {
          '../dist/web/styles/app.css',
          '../dist/web/scripts/app.js'],
         indexHtml:'./index.html',
-        electronSources: './electron/**/*'
+        electronSources: './electron/**/*',
+        cordovaSources: './cordova/**/*'
     },
     targets: {
-        
+        cordova: '../dist/mobile',
+        cordovaWebRoot: '../dist/mobile/www',
         root: '../dist',
         webRoot: '../dist/web',
         desktopOsx: '../dist/desktop/osx',
