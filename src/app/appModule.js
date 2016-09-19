@@ -18,6 +18,7 @@ var appRoutes_1 = require('./appRoutes');
 var details_1 = require('./components/articles/details');
 var home_1 = require('./home/home');
 var articlesResolver_1 = require('./resolvers/articlesResolver');
+var common_1 = require('@angular/common');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,7 +35,8 @@ var AppModule = (function () {
             bootstrap: [root_1.RootComponent],
             providers: [
                 articleService_1.ArticlesService,
-                articlesResolver_1.ArticlesResolver
+                articlesResolver_1.ArticlesResolver,
+                { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }
             ]
         }), 
         __metadata('design:paramtypes', [])

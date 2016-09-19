@@ -16,6 +16,8 @@ export class ArticleDetailsComponent implements OnInit {
     public article: Article;
 
     public ngOnInit(): void {
-
+        this._activatedRoute.data.forEach((routeData: { article: Article})=>{
+           this.article = routeData.article;
+        });
     }
 }

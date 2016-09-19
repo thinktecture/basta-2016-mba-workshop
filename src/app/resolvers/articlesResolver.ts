@@ -14,7 +14,6 @@ export class ArticlesResolver implements Resolve<Article>{
 
         return this._articlesService.getArticleById(route.params['id']);
 
-
     }
 
 }

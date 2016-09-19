@@ -15,6 +15,10 @@ var ArticleDetailsComponent = (function () {
         this._activatedRoute = _activatedRoute;
     }
     ArticleDetailsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._activatedRoute.data.forEach(function (routeData) {
+            _this.article = routeData.article;
+        });
     };
     ArticleDetailsComponent = __decorate([
         core_1.Component({

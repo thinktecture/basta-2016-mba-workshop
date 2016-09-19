@@ -8,6 +8,7 @@ import {APP_ROUTES} from './appRoutes';
 import {ArticleDetailsComponent} from './components/articles/details';
 import {HomeComponent} from './home/home';
 import {ArticlesResolver} from './resolvers/articlesResolver';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 @NgModule({
     imports: [ BrowserModule, HttpModule, APP_ROUTES ],
@@ -21,7 +22,8 @@ import {ArticlesResolver} from './resolvers/articlesResolver';
     bootstrap: [ RootComponent ],
     providers: [
         ArticlesService,
-        ArticlesResolver
+        ArticlesResolver,
+        { provide: LocationStrategy, useClass: HashLocationStrategy}
     ]
 })
 export class AppModule{
