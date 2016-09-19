@@ -1,0 +1,14 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Code</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let article of articles" (click)="openDetails(article)">
+            <td>{{article.Name}}</td>
+            <td>{{article.Code}}</td>
+        </tr>
+    </tbody>
+</table>
